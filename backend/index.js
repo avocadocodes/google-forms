@@ -36,7 +36,7 @@ app.post("/createuser", async (req, res) => {
       const hashedpassword = await bcrypt.hash(req.body.password, salt);
       req.body.password = hashedpassword;
       const user = new User(req.body);
-      await user.save(); 
+      await user.save(); // Make sure to await this operation
       return res.status(200).json({ msg: "Success", user: user });
     }
   } catch (err) {

@@ -19,7 +19,7 @@ function App() {
           <div className="right">
             <h1 className="heading">
               {" "}
-              NanduForms :{" "}
+              Forms :{" "}
               <span className="spantag">
                 {localStorage.getItem("name")
                   ? `Welcome ${localStorage.getItem("name")}`
